@@ -1,12 +1,14 @@
+
 module.exports = readMeDate => {
  
-    let{} = readMeDate;
+    let{projectName, description, Installation, usage, credits, license, contribute, tests, questions, githubuser, githublink, email} = readMeDate;
 
     return `
-    # <Your-Project-Title>
+    # ${projectName}
 
     ## Description
     
+    ${description}
    
     
     ## Table of Contents
@@ -21,28 +23,36 @@ module.exports = readMeDate => {
        
     ## Installation
     
-    What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+    ${Installation}
     
     ## Usage
     
-   
+    ${usage}
+
     ## Credits
     
-   
+    ${credits}
     
     ## License
     
+    ${license}
    
     
     ## How to Contribute
     
+    ${contribute}
    
     
     ## Tests
     
+    ${tests}
    
     
     ## Questions
-   
+    
+    ${githubuser}
+    ${githublink}
+    ${email}
+
     `;
 }
