@@ -8,22 +8,62 @@ var askQuestions = () => {
             {
                 type: 'input',
                 name: 'projectName',
-                message: "Please provide a project name (Required)"
+                message: "Please provide a project name (Required).",
+                validate: projectName => {
+                    if(projectName)
+                    {
+                        return true;
+                    }
+                    else{
+                        console.log("Please provide a project name");
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'description',
-                message:"Provide a short description explaining the what, why, and how of your project."
+                message:"Provide a short description explaining the what, why, and how of your project (Required).",
+                validate: description => {
+                    if(description)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        console.log("Please provide a description");
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'installation',
-                message:"What are the steps required to install your project?"
+                message:"What are the steps required to install your project? (Required)",
+                validate: installation => {
+                    if(installation)
+                    {
+                        return true;
+                    }
+                    else{
+                        console.log("Please provide steps to install");
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'usage',
-                message:"Provide instructions and examples for use."
+                message:"Provide instructions and examples for use.(Required)",
+                validate: usage => {
+                    if(usage)
+                    {
+                        return true;
+                    }
+                    else{
+                        console.log("Please provide instructions and examples for use.");
+                    }
+                }
             },
             {
                 type: 'input',
@@ -31,9 +71,10 @@ var askQuestions = () => {
                 message:"List your collaborators, if any, with links to their GitHub profiles."
             },
             {
-                type: 'input',
+                type: 'list',
                 name: 'license',
-                message:"Choose a license."
+                message:"Choose a license.",
+                choices: ['MIT','Apache','GNU GPLV3','ISC License','None']
             },
             {
                 type: 'input',

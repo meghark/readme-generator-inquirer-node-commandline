@@ -61,30 +61,12 @@ ${installation}
     
 ${usage}
 
-## Credits
-    
-${credits}
-    
+${generateCredits(credits)}   
 ## License
     
-${license}
-   
-    
-## Contribute
-    
-${contribute}
-   
-    
-## Tests
-    
-${tests}
-   
-    
-## Questions
-    
-${githubuser}
-${githublink}
-${email}
-
+${license}  
+${generateContribute(contribute)}
+${generateTest(tests)}
+${generateQuestions(githubuser, githublink, email)}
     `;
 }
