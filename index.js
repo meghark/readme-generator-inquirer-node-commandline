@@ -70,7 +70,7 @@ var askQuestions = () => {
 
 const saveReadMe = answers => {
     const readme = generateReadMe(answers);
-    fs.writeFile('./readme.md', readme, err => {
+    fs.writeFile('./dist/readme.md', readme, err => {
         if(err) throw err;
 
         console.log("File created");

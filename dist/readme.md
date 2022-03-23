@@ -1,14 +1,9 @@
 
-module.exports = readMeDate => {
- 
-    let{projectName, description, installation, usage, credits, license, contribute, tests, questions, githubuser, githublink, email} = readMeDate;
-
-    return `
-# ${projectName}
+# sd
 
 ## Description
     
-${description}
+sd
    
     
 ## Table of Contents
@@ -23,36 +18,35 @@ If your README is long, add a table of contents to make it easy for users to fin
        
 ## Installation
     
-${installation}
+sd
     
 ## Usage
     
-${usage}
+sd
 
 ## Credits
     
-${credits}
+sd
     
 ## License
     
-${license}
+d
    
     
 ## How to Contribute
     
-${contribute}
+sd
    
     
 ## Tests
     
-${tests}
+sd
    
     
 ## Questions
     
-${githubuser}
-${githublink}
-${email}
+ssd
+sd
+sd
 
-    `;
-}
+    
