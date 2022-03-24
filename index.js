@@ -74,7 +74,7 @@ var askQuestions = () => {
                 type: 'list',
                 name: 'license',
                 message:"Choose a license.",
-                choices: ['MIT','Apache','GNU GPLV3','ISC License','None']
+                choices: ['MIT','Apache','GNU GPLV3','BSD','None']
             },
             {
                 type: 'input',
@@ -90,12 +90,7 @@ var askQuestions = () => {
                 type: 'input',
                 name: 'githubuser',
                 message:"Provide github username"
-            },
-            {
-                type: 'input',
-                name: 'githublink',
-                message:"Provide github link"
-            },
+            },        
             {
                 type: 'input',
                 name: 'email',

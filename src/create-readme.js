@@ -90,11 +90,37 @@ var  generateQuestions = (githubuser, githublink, email) => {
 # Questions
 
 if you have any questions about the repository, open an issue/pr or contact me directly at ${email}.
-You can find more of my work at [${githubuser}](${githublink}).
-
-
+You can find more of my work at [${githubuser}](https://github.com/${githubuser}).
 `
+}
 
+const generateBadge = (license)=> {
+    'MIT','Apache','GNU GPLV3','BSD','None'
+    let url='';
+    switch(license){
+        case 'MIT':
+            url='https://img.shields.io/badge/license-MIT-green';
+            break;
+        case 'Apache':
+            url='https://img.shields.io/badge/license-Apache-blue';
+            break;
+        case 'GNU GPLV3':
+            url='https://img.shields.io/badge/license-GPL-blue';
+            break;
+        case 'BSD':
+            url='https://img.shields.io/badge/license-BSD-green';
+            break;
+    }
+if(url){
+return `
+![GitHub license](${url}) 
+`
+}
+else
+{
+    return '';
+}
+  
 }
 
 
@@ -105,6 +131,7 @@ module.exports = readMeDate => {
     return `
 # ${projectName}
 
+${generateBadge(license)}
 
 
 ## Description

@@ -1,5 +1,10 @@
 
-# ds
+# sd
+
+
+![GitHub license](https://img.shields.io/badge/license-MIT-green) 
+
+
 
 ## Description
     
@@ -12,6 +17,8 @@ sd
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Contribute](#contribute)
+- [Tests](#tests)
     
        
 ## Installation
@@ -20,31 +27,35 @@ sd
     
 ## Usage
     
-sd
+sf
 
-## Credits
-    
-sd
-    
+
+# Credits
+
+sf
+
+           
 ## License
     
-MIT
-   
-    
-## Contribute
-    
+MIT  
 
-   
-    
-## Tests
-    
 
-   
-    
-## Questions
-    
+# Contribute
+
+sf
+        
+
+
+# Tests
+
+sf
 
 
 
+
+# Questions
+
+if you have any questions about the repository, open an issue/pr or contact me directly at sd.
+You can find more of my work at [sf](https://github.com/sf).
 
     
