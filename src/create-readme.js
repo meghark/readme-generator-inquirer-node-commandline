@@ -36,12 +36,76 @@ var generateTableOfContents = (data) => {
 }
 
 
+var  generateCredits = (credit) => {
+
+    if(credit){
+        return `
+
+# Credits
+
+${credit}
+
+        `
+    }
+    else{
+        return '';
+    }
+}
+
+var  generateContribute = (contribute) => {
+    if(contribute){
+        return `
+
+# Contribute
+
+${contribute}
+        `
+    }
+    else{
+        return '';
+    }
+}
+
+var  generateTest = (test) => {
+    if(test)
+    {
+return `
+
+# Tests
+
+${test}
+
+`
+    }
+    else{
+        return '';
+    }
+    
+
+}
+
+var  generateQuestions = (githubuser, githublink, email) => {
+    return `
+
+# Questions
+
+if you have any questions about the repository, open an issue/pr or contact me directly at ${email}.
+You can find more of my work at [${githubuser}](${githublink}).
+
+
+`
+
+}
+
+
 module.exports = readMeDate => {
  
-    let{projectName, description, installation, usage, credits, license, contribute, tests, questions, githubuser, githublink, email} = readMeDate;
+    let{projectName, description, installation, usage, credits, license, contribute, tests,  githubuser, githublink, email} = readMeDate;
 
     return `
 # ${projectName}
+
+
 
 ## Description
     
@@ -60,7 +124,6 @@ ${installation}
 ## Usage
     
 ${usage}
-
 ${generateCredits(credits)}   
 ## License
     

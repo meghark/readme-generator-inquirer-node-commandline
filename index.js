@@ -85,12 +85,7 @@ var askQuestions = () => {
                 type: 'input',
                 name: 'tests',
                 message:"Write tests for your application"
-            },
-            {
-                type: 'input',
-                name: 'questions',
-                message:"Instructions for questions"
-            },
+            },           
             {
                 type: 'input',
                 name: 'githubuser',
