@@ -1,2 +1,4 @@
-node_modules
 CAPTURE*
+node_modules
+.vscode
+.DS_Store

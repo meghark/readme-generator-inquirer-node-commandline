@@ -1,6 +1,27 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateReadMe = require('./src/create-readme.js');
+const generateReadMe = require('./utils/generateMarkdown.js');
+
+// TODO: Create an array of questions for user input
+const questions = [];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    const readme = generateReadMe(data);
+    fs.writeFile(fileName, readme, err => {
+        if(err) throw err;
+
+        console.log("File created");
+    })
+}
+
+// TODO: Create a function to initialize app
+function init() {
+    askQuestions()
+    .then(answers => {
+        writeToFile(answers, './dist/generatedreadme.md');
+    })
+}
 
 var askQuestions = () => {
     return inquirer.
@@ -99,14 +120,5 @@ var askQuestions = () => {
         ]);
 }
 
-const saveReadMe = answers => {
-    const readme = generateReadMe(answers);
-    fs.writeFile('./dist/readme.md', readme, err => {
-        if(err) throw err;
-
-        console.log("File created");
-    })
-}
-
-askQuestions()
-    .then(saveReadMe);
+// Function call to initialize app
+init();

@@ -1,5 +1,5 @@
 
-var generateTableOfContents = (data) => {
+const generateTableOfContents = (data) => {
 
     var contentsArr = [];
 
@@ -36,7 +36,7 @@ var generateTableOfContents = (data) => {
 }
 
 
-var  generateCredits = (credit) => {
+const  generateCredits = (credit) => {
 
     if(credit){
         return `
@@ -52,7 +52,7 @@ ${credit}
     }
 }
 
-var  generateContribute = (contribute) => {
+const  generateContribute = (contribute) => {
     if(contribute){
         return `
 
@@ -66,7 +66,7 @@ ${contribute}
     }
 }
 
-var  generateTest = (test) => {
+const  generateTest = (test) => {
     if(test)
     {
 return `
@@ -84,7 +84,7 @@ ${test}
 
 }
 
-var  generateQuestions = (githubuser, githublink, email) => {
+const  generateQuestions = (githubuser, githublink, email) => {
     return `
 
 # Questions
@@ -94,7 +94,7 @@ You can find more of my work at [${githubuser}](https://github.com/${githubuser}
 `
 }
 
-const generateBadge = (license)=> {
+const renderLicenseBadge = (license)=> {
     'MIT','Apache','GNU GPLV3','BSD','None'
     let url='';
     switch(license){
@@ -124,14 +124,14 @@ else
 }
 
 
-module.exports = readMeDate => {
+module.exports = generateMarkdown => {
  
     let{projectName, description, installation, usage, credits, license, contribute, tests,  githubuser, githublink, email} = readMeDate;
 
     return `
 # ${projectName}
 
-${generateBadge(license)}
+${renderLicenseBadge(license)}
 
 
 ## Description
