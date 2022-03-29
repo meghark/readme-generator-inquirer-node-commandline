@@ -5,7 +5,6 @@ const generateReadMe = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = [];
 
-// TODO: Create a function to write README file
 function writeToFile(data, fileName ) {
     const readme = generateReadMe(data);
     fs.writeFile(fileName, readme, err => {
@@ -15,7 +14,6 @@ function writeToFile(data, fileName ) {
     })
 }
 
-// TODO: Create a function to initialize app
 const init= () => {
     askQuestions()
     .then(answers => {
