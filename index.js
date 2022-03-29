@@ -6,7 +6,7 @@ const generateReadMe = require('./utils/generateMarkdown.js');
 const questions = [];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data, fileName ) {
     const readme = generateReadMe(data);
     fs.writeFile(fileName, readme, err => {
         if(err) throw err;
@@ -16,12 +16,15 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
+const init= () => {
     askQuestions()
     .then(answers => {
         writeToFile(answers, './dist/generatedreadme.md');
     })
-}
+    .catch(err => {
+        console.log(err);
+    })
+};
 
 var askQuestions = () => {
     return inquirer.

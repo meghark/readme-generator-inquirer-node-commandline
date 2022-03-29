@@ -84,7 +84,7 @@ ${test}
 
 }
 
-const  generateQuestions = (githubuser, githublink, email) => {
+const  generateQuestions = (githubuser,  email) => {
     return `
 
 # Questions
@@ -122,11 +122,9 @@ else
 }
   
 }
-
-
-module.exports = generateMarkdown => {
+const generateMarkdown = readMeData => {
  
-    let{projectName, description, installation, usage, credits, license, contribute, tests,  githubuser, githublink, email} = readMeDate;
+    let{projectName, description, installation, usage, credits, license, contribute, tests,  githubuser,  email} = readMeData;
 
     return `
 # ${projectName}
@@ -141,7 +139,7 @@ ${description}
     
 ## Table of Contents
     
-${generateTableOfContents(readMeDate)}
+${generateTableOfContents(readMeData)}
     
        
 ## Installation
@@ -157,6 +155,8 @@ ${generateCredits(credits)}
 ${license}  
 ${generateContribute(contribute)}
 ${generateTest(tests)}
-${generateQuestions(githubuser, githublink, email)}
+${generateQuestions(githubuser,  email)}
     `;
 }
+
+module.exports = generateMarkdown;
