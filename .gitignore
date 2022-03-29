@@ -2,3 +2,4 @@ CAPTURE*
 node_modules
 .vscode
 .DS_Store
+generatedreadme.md

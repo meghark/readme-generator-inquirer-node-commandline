@@ -1,5 +1,5 @@
 
-# dsf
+# df
 
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-green) 
@@ -15,27 +15,47 @@ df
     
 - [Installation](#installation)
 - [Usage](#usage)
+- [Credits](#credits)
 - [License](#license)
+- [Contribute](#contribute)
+- [Tests](#tests)
     
        
 ## Installation
     
-sdf
+df
     
 ## Usage
     
-dsf
-   
+df
+
+
+# Credits
+
+df
+
+           
 ## License
     
 MIT  
+
+
+# Contribute
+
+d
+        
+
+
+# Tests
+
+d
 
 
 
 
 # Questions
 
-if you have any questions about the repository, open an issue/pr or contact me directly at .
-You can find more of my work at [](https://github.com/).
+if you have any questions about the repository, open an issue/pr or contact me directly at df.
+You can find more of my work at [d](https://github.com/d).
 
     
