@@ -2,6 +2,7 @@
 const generateTableOfContents = (data) => {
 
     var contentsArr = [];
+    let retTable=`\n## Table of Contents\n\n`;
 
     if(data.installation)
     {
@@ -32,7 +33,10 @@ const generateTableOfContents = (data) => {
         contentsArr.push('- [Questions](#questions)');
     }
 
-    return contentsArr.join('\n');
+    retTable += `\t`;
+    retTable += contentsArr.join('\n\t');
+
+    return retTable;
 }
 
 
@@ -81,6 +85,36 @@ const  generateQuestions = (githubuser,  email) => {
     return questions; 
 }
 
+const getProjectName = (projectName) =>
+{
+    const retProject = `\n# ${projectName}\n`;    
+    return retProject; 
+}
+
+const getDescription = (description) =>
+{
+    const retDescription = `\n## Description\n\n${description}\n`;    
+    return retDescription; 
+}
+
+const getInstall= (install) =>
+{
+    const retInstall = `\n## Installation\n\n${install}\n`;    
+    return retInstall; 
+}
+
+const getUsage= (usage) =>
+{
+    const retValue = `\n## Usage\n\n${usage}\n`;    
+    return retValue; 
+}
+
+const getLicense= (license) =>
+{
+    const retValue = `\n## License\n\n${license}\n`;    
+    return retValue; 
+}
+
 const renderLicenseBadge = (license)=> {
     'MIT','Apache','GNU GPLV3','BSD','None'
     let url='';
@@ -100,46 +134,26 @@ const renderLicenseBadge = (license)=> {
             break;
     }
     if(url){
-        returnLicense=`![GitHub license](${url})`;    
+        returnLicense=`![GitHub license](${url})\n`;    
     }
     return returnLicense;
 }
 const generateMarkdown = readMeData => {
  
     let{projectName, description, installation, usage, credits, license, contribute, tests,  githubuser,  email} = readMeData;
-    console.log(generateContribute(contribute));
-
-     return `
-# ${projectName}
-
-${renderLicenseBadge(license)}
-
-
-## Description
-    
-${description}
-   
-    
-## Table of Contents
-    
-${generateTableOfContents(readMeData)}
-    
-       
-## Installation
-    
-${installation}
-    
-## Usage
-    
-${usage}
-${generateCredits(credits)}   
-## License
-    
-${license}  
-${generateContribute(contribute)}
-${generateTest(tests)}
-${generateQuestions(githubuser,  email)}
-    `;
+    let markdown= getProjectName(projectName);
+    markdown += renderLicenseBadge(license);
+    markdown += getDescription(description);
+    markdown += generateTableOfContents(readMeData);
+    markdown += getInstall(installation);
+    markdown += getUsage(usage);
+    markdown += generateCredits(credits);
+    markdown += getLicense(license);
+    markdown += generateContribute(contribute);
+    markdown += generateTest(tests);
+    markdown += generateQuestions(githubuser,  email);
+    console.log(markdown);
+    return markdown;
 }
 
 module.exports = generateMarkdown;
