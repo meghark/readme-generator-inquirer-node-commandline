@@ -1,5 +1,5 @@
 
-# df
+# Portfolio Project
 
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-green) 
@@ -8,7 +8,7 @@
 
 ## Description
     
-df
+Create a portfolio for job application
    
     
 ## Table of Contents
@@ -23,16 +23,16 @@ df
        
 ## Installation
     
-df
+npm install
     
 ## Usage
     
-df
+Download.
 
 
 # Credits
 
-df
+None
 
            
 ## License
@@ -42,20 +42,20 @@ MIT
 
 # Contribute
 
-d
+Pulll request , email
         
 
 
 # Tests
 
-d
+npm test
 
 
 
 
 # Questions
 
-if you have any questions about the repository, open an issue/pr or contact me directly at df.
-You can find more of my work at [d](https://github.com/d).
+if you have any questions about the repository, open an issue/pr or contact me directly at megha.nambiar@gmail.com.
+You can find more of my work at [meghark](https://github.com/meghark).
 
     

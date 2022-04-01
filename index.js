@@ -99,6 +99,7 @@ const questions = [
 
 function writeToFile(data, fileName ) {
     const readme = generateReadMe(data);
+    
     fs.writeFile(fileName, readme, err => {
         if(err) throw err;
 
@@ -122,4 +123,17 @@ var askQuestions = () => {
 }
 
 // Function call to initialize app
-init();
+//init();
+const data1 = {
+    projectName: 'Portfolio Project',
+    description: 'Create a portfolio for job application',
+    installation: 'npm install',
+    usage: 'Download.',
+    credits: 'None',
+    license: 'MIT',
+    contribute: 'Pulll request , email',
+    tests: 'npm test',
+    githubuser: 'meghark',
+    email: 'megha.nambiar@gmail.com'
+  };
+generateReadMe(data1);
