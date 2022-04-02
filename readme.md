@@ -47,6 +47,6 @@ Use as required.
 # Questions
 
 if you have any questions about the repository, open an issue/pr or contact me directly at megha.nambiar@gmail.com 
-You can find more of my work at [](https://github.com/meghark).
+You can find more of my work at [Github](https://github.com/meghark).
 
     
