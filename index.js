@@ -97,6 +97,12 @@ const questions = [
     }
 ];
 
+//Call the askQuestions function first, so user can provide input on command line.
+//The answers provided by the user are used to call the generateReadMe funtion.
+//This function will return the markdown.
+//The markdown is passed to writefile function to save to file.
+//If file save is successful a message is logged in console. The readme is available in dist folder.
+//All error messages are printed on console.
 const init= () => {
     askQuestions()
     .then(answers => {

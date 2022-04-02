@@ -1,4 +1,7 @@
 
+//Function creates the table of content for the markdown.
+//The links are will take user to approriate sections.
+//The links for optional section will be displayed only if user provides an input.
 const generateTableOfContents = (data) => {
 
     var contentsArr = [];
@@ -39,7 +42,9 @@ const generateTableOfContents = (data) => {
     return retTable;
 }
 
-
+//Function creates the credit section of the markdown.
+//This is an optional question and section will be generated only if user has 
+//provided as input.
 const  generateCredits = (credit) => {
     let retCredit ='';
     if(credit){
@@ -48,6 +53,9 @@ const  generateCredits = (credit) => {
     return retCredit;
 }
 
+//Function creates the contribute section of the markdown.
+//This is an optional question and section will be generated only if user has 
+//provided as input.
 const  generateContribute = (contribute) => {
     let retContribute='';
 
@@ -57,6 +65,9 @@ const  generateContribute = (contribute) => {
     return retContribute;
 }
 
+//Function creates the test section of the markdown.
+//This is an optional question and section will be generated only if user has 
+//provided as input.
 const  generateTest = (test) => {
     let returnTest='';
     if(test)
@@ -66,6 +77,9 @@ const  generateTest = (test) => {
     return returnTest; 
 }
 
+//Function creates the questions section of the markdown.
+//These are optional user inputs the section will have content displayed
+//based on user entries.
 const  generateQuestions = (githubuser,  email) => {
     let questions =`\n# Questions\n\nif you have any questions about the repository, open an issue/pr`;
     if(!githubuser && !email)
@@ -85,35 +99,42 @@ const  generateQuestions = (githubuser,  email) => {
     return questions; 
 }
 
+//Function creates the project name header of the markdown.
 const getProjectName = (projectName) =>
 {
     const retProject = `\n# ${projectName}\n`;    
     return retProject; 
 }
 
+//Function creates the description section of the markdown.
 const getDescription = (description) =>
 {
     const retDescription = `\n## Description\n\n${description}\n`;    
     return retDescription; 
 }
 
+//Function creates the install section of the markdown.
 const getInstall= (install) =>
 {
     const retInstall = `\n## Installation\n\n${install}\n`;    
     return retInstall; 
 }
 
+//Function creates the usage section of the markdown.
 const getUsage= (usage) =>
 {
     const retValue = `\n## Usage\n\n${usage}\n`;    
     return retValue; 
 }
 
+//Function creates the license section of the markdown.
 const getLicense= (license) =>
 {
     const retValue = `\n## License\n\n${license}\n`;    
     return retValue; 
 }
+
+//Function generates the license badge based on user selected license.
 
 const renderLicenseBadge = (license)=> {
     'MIT','Apache','GNU GPLV3','BSD','None'
@@ -138,6 +159,9 @@ const renderLicenseBadge = (license)=> {
     }
     return returnLicense;
 }
+
+//The following function generates markdown string for return by calling the 
+// related functions. This will be the functions called by the index app.
 const generateMarkdown = readMeData => {
  
     let{projectName, description, installation, usage, credits, license, contribute, tests,  githubuser,  email} = readMeData;
