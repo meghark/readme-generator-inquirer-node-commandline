@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
-const generateReadMe = require('./utils/generateMarkdown.js');
+const generateReadMe = require('./src/generateMarkdown.js');
+const writeToFile = require('./utils/file-operations.js')
 
 // Array of questions for input
 const questions = [
@@ -97,20 +97,16 @@ const questions = [
     }
 ];
 
-function writeToFile(data, fileName ) {
-    const readme = generateReadMe(data);
-    
-    fs.writeFile(fileName, readme, err => {
-        if(err) throw err;
-
-        console.log("File created");
-    })
-}
-
 const init= () => {
     askQuestions()
     .then(answers => {
-        writeToFile(answers, './dist/generatedreadme.md');
+        return generateReadMe(answers);        
+    })
+    .then(markDown => {
+       return writeToFile(markDown);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
     })
     .catch(err => {
         console.log(err);
@@ -123,8 +119,8 @@ var askQuestions = () => {
 }
 
 // Function call to initialize app
-//init();
-const data1 = {
+init();
+/*const data1 = {
     projectName: 'Portfolio Project',
     description: 'Create a portfolio for job application',
     installation: 'npm install',
@@ -136,4 +132,4 @@ const data1 = {
     githubuser: 'meghark',
     email: 'megha.nambiar@gmail.com'
   };
-generateReadMe(data1);
+generateReadMe(data1);*/
