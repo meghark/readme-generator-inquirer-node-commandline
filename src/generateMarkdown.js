@@ -152,7 +152,6 @@ const generateMarkdown = readMeData => {
     markdown += generateContribute(contribute);
     markdown += generateTest(tests);
     markdown += generateQuestions(githubuser,  email);
-    console.log(markdown);
     return markdown;
 }
 
