@@ -120,16 +120,3 @@ var askQuestions = () => {
 
 // Function call to initialize app
 init();
-/*const data1 = {
-    projectName: 'Portfolio Project',
-    description: 'Create a portfolio for job application',
-    installation: 'npm install',
-    usage: 'Download.',
-    credits: 'None',
-    license: 'MIT',
-    contribute: 'Pulll request , email',
-    tests: 'npm test',
-    githubuser: 'meghark',
-    email: 'megha.nambiar@gmail.com'
-  };
-generateReadMe(data1);*/
