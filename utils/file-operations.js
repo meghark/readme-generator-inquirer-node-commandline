@@ -6,7 +6,7 @@ const fs = require('fs');
 //else error message in reject() is returned.
 const writeToFile= data => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/generatedreadme.md', data, err =>{
+        fs.writeFile('./dist/README.md', data, err =>{
             if(err)
             {
                 reject(err);
@@ -14,7 +14,7 @@ const writeToFile= data => {
             };
             resolve({
                 ok: true,
-                message: 'Read me generated'
+                message: 'Read me generated and available in dist folder'
             });
         })
     });
