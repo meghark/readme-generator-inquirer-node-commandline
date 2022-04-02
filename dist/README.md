@@ -8,12 +8,12 @@ df
 
 ## Table of Contents
 
-	- [Installation](#installation)
-	- [Usage](#usage)
-	- [Credits](#credits)
-	- [License](#license)
-	- [Contribute](#contribute)
-	- [Tests](#tests)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Contribute](#contribute)
+- [Tests](#tests)
 ## Installation
 
 dg
@@ -22,23 +22,23 @@ dg
 
 dg
 
-# Credits
+## Credits
 
 dg
 
 ## License
 
-MIT
+This project is lincensed under the MIT license.
 
-# Contribute
-
-dg
-
-# Tests
+## Contribute
 
 dg
 
-# Questions
+## Tests
+
+dg
+
+## Questions
 
 if you have any questions about the repository, open an issue/pr or contact me directly at dg.
 You can find more of my work at [dg](https://github.com/dg).

@@ -36,8 +36,7 @@ const generateTableOfContents = (data) => {
         contentsArr.push('- [Questions](#questions)');
     }
 
-    retTable += `\t`;
-    retTable += contentsArr.join('\n\t');
+    retTable += contentsArr.join('\n');
 
     return retTable;
 }
@@ -130,7 +129,7 @@ const getUsage= (usage) =>
 //Function creates the license section of the markdown.
 const getLicense= (license) =>
 {
-    const retValue = `\n## License\n\nThis project is lincensed under the ${license} license.\n`;   
+    const retValue = `\n## License\n\nThis project is licensed under the ${license} license.\n`;   
     return retValue; 
 }
 
