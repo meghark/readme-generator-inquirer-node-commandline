@@ -48,7 +48,7 @@ const generateTableOfContents = (data) => {
 const  generateCredits = (credit) => {
     let retCredit ='';
     if(credit){
-        retCredit=`\n# Credits\n\n${credit}\n`;        
+        retCredit=`\n## Credits\n\n${credit}\n`;        
     }
     return retCredit;
 }
@@ -60,7 +60,7 @@ const  generateContribute = (contribute) => {
     let retContribute='';
 
     if(contribute){
-        retContribute = `\n# Contribute\n\n${contribute}\n`;
+        retContribute = `\n## Contribute\n\n${contribute}\n`;
     }
     return retContribute;
 }
@@ -72,7 +72,7 @@ const  generateTest = (test) => {
     let returnTest='';
     if(test)
     {
-        returnTest = `\n# Tests\n\n${test}\n`;         
+        returnTest = `\n## Tests\n\n${test}\n`;         
     }
     return returnTest; 
 }
@@ -81,7 +81,7 @@ const  generateTest = (test) => {
 //These are optional user inputs the section will have content displayed
 //based on user entries.
 const  generateQuestions = (githubuser,  email) => {
-    let questions =`\n# Questions\n\nif you have any questions about the repository, open an issue/pr`;
+    let questions =`\n## Questions\n\nif you have any questions about the repository, open an issue/pr`;
     if(!githubuser && !email)
     {
         return '';
@@ -130,7 +130,7 @@ const getUsage= (usage) =>
 //Function creates the license section of the markdown.
 const getLicense= (license) =>
 {
-    const retValue = `\n## License\n\n${license}\n`;    
+    const retValue = `\n## License\n\nThis project is lincensed under the ${license} license.\n`;   
     return retValue; 
 }
 
