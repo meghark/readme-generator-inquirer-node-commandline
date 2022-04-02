@@ -36,6 +36,13 @@ To run the command line application.
 ## Usage
 
 Run node index.js from the project directory to run the application.
+Provide user inputs for the questions.
+Check console for any errors.
+If the program runs without errors, the dist folder will have the newly generated readme file.
+Use as required.
+
+## Command line app screenshot
+![Screeshot of command line question](./images/screenshot.PNG)
 
 # Questions
 
