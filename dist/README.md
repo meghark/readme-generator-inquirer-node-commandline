@@ -1,10 +1,10 @@
 
-# fd
+# Read Me Generator
 ![GitHub license](https://img.shields.io/badge/license-MIT-green)
 
 ## Description
 
-df
+Use this node.js application to generate a professional readme file with sections you want.
 
 ## Table of Contents
 
@@ -16,29 +16,29 @@ df
 - [Tests](#tests)
 ## Installation
 
-dg
+Clone the project from Github. Run npm Install.
 
 ## Usage
 
-dg
+Install the project and run the application from command line using the command node index.js.
 
 ## Credits
 
-dg
+No collaborators for this project.
 
 ## License
 
-This project is lincensed under the MIT license.
+This project is licensed under the MIT license.
 
 ## Contribute
 
-dg
+Contribute via pull requests or log issues on Github.
 
 ## Tests
 
-dg
+Npm test
 
 ## Questions
 
-if you have any questions about the repository, open an issue/pr or contact me directly at dg.
-You can find more of my work at [dg](https://github.com/dg).
+if you have any questions about the repository, open an issue/pr or contact me directly at megha.nambiar@gmail.com.
+You can find more of my work at [Meghak](https://github.com/Meghak).
