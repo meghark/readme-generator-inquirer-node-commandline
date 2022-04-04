@@ -19,7 +19,7 @@ const generateTableOfContents = (data) => {
     {
         contentsArr.push('- [Credits](#credits)');
     }
-    if(data.license)
+    if(data.license && data.license != 'None')
     {
         contentsArr.push('- [License](#license)');
     }
@@ -128,8 +128,13 @@ const getUsage= (usage) =>
 
 //Function creates the license section of the markdown.
 const getLicense= (license) =>
-{
-    const retValue = `\n## License\n\nThis project is licensed under the ${license} license.\n`;   
+{   
+    console.log(license);
+    let retValue = '';
+    if(license != 'None')
+    {
+        retValue = `\n## License\n\nThis project is licensed under the ${license} license.\n`; 
+    }      
     return retValue; 
 }
 
