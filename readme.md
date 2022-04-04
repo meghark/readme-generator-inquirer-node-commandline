@@ -44,6 +44,13 @@ Use as required.
 ## Command line app screenshot
 ![Screeshot of command line question](./images/screenshot.PNG)
 
+
+## Link to demo video
+
+Use the following video to access a short demo on the application.
+https://drive.google.com/file/d/1oKsWyQ_f57a4nx30xRrrgAMHYd5d6Hdf/view?usp=sharing
+
+
 # Questions
 
 if you have any questions about the repository, open an issue/pr or contact me directly at megha.nambiar@gmail.com 
